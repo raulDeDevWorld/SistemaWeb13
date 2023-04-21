@@ -371,7 +371,7 @@ function CotizacionTerrestre() {
                                     <input type="text" name={"DIRECCION"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.direccion && userDB.bank.direccion} />
                                 </div>
                             </div>
-                    </div>
+                    </div> 
                 </form>
             </div>
 
