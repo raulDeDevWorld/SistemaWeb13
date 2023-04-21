@@ -160,7 +160,8 @@ function CotizacionTerrestre() {
     function handleFilterChange(e) {
         setFilter(e.target.value)
     }
-
+    function autoComplete (e) {
+    }
     function handlerFilterButton(e) {
 
         e.preventDefault()
@@ -336,41 +337,40 @@ function CotizacionTerrestre() {
                     <div className={style.subtitle}>DATOS BANCARIOS</div>
                     <br />
                     <div className={style.containerFirstItems}>
-
-                        <div className={style.firstItems}>
-                            <div>
-                                <label htmlFor="">BANCO</label>
-                                <input type="text" name={"BANCO"} onChange={handleEventChange} />
+                    <div className={style.firstItems}>
+                                <div>
+                                    <label htmlFor="">BANCO</label>
+                                    <input type="text" name={"BANCO"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.banco && userDB.bank.banco} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">DIRECCION DE BANCO</label>
+                                    <input type="text" name={"DIRECCION DE BANCO"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.direccionDeBanco && userDB.bank.direccionDeBanco} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">CODIGO SWIFT</label>
+                                    <input type="text" name={"CODIGO SWIFT"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.codigoSWIFT && userDB.bank.codigoSWIFT} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">NUMERO DE CUENTA EN BS</label>
+                                    <input type="text" name={"NUMERO DE CUENTA EN BS"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.cuentaEnBS && userDB.bank.cuentaEnBS} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">NUMERO DE CUENTA EN USD</label>
+                                    <input type="text" name={"NUMERO DE CUENTA EN USD"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.cuentaEnUSD && userDB.bank.cuentaEnUSD} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">TIPO DE CUENTA</label>
+                                    <input type="text" name={"TIPO DE CUENTA"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.tipoDeCuenta && userDB.bank.tipoDeCuenta} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">NOMBRE</label>
+                                    <input type="text" name={"NOMBRE2"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.nombre2 && userDB.bank.nombre2} />
+                                </div>
+                                <div>
+                                    <label htmlFor="">DIRECCION</label>
+                                    <input type="text" name={"DIRECCION"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.direccion && userDB.bank.direccion} />
+                                </div>
                             </div>
-                            <div>
-                                <label htmlFor="">DIRECCION DE BANCO</label>
-                                <input type="text" name={"DIRECCION DE BANCO"} onChange={handleEventChange} />
-                            </div>
-                            <div>
-                                <label htmlFor="">CODIGO SWIFT</label>
-                                <input type="text" name={"CODIGO SWIFT"} onChange={handleEventChange} />
-                            </div>
-                            <div>
-                                <label htmlFor="">NUMERO DE CUENTA EN BS</label>
-                                <input type="text" name={"NUMERO DE CUENTA EN BS"} onChange={handleEventChange} />
-                            </div>
-                            <div>
-                                <label htmlFor="">NUMERO DE CUENTA EN USD</label>
-                                <input type="text" name={"NUMERO DE CUENTA EN USD"} onChange={handleEventChange} />
-                            </div>
-                            <div>
-                                <label htmlFor="">TIPO DE CUENTA</label>
-                                <input type="text" name={"TIPO DE CUENTA"} onChange={handleEventChange} />
-                            </div>
-                            <div>
-                                <label htmlFor="">NOMBRE</label>
-                                <input type="text" name={"NOMBRE2"} onChange={handleEventChange} />
-                            </div>
-                            <div>
-                                <label htmlFor="">DIRECCION</label>
-                                <input type="text" name={"DIRECCION"} onChange={handleEventChange} />
-                            </div>
-                        </div>
                     </div>
                 </form>
             </div>

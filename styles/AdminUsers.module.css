@@ -233,17 +233,27 @@
 .items div :nth-child(n){
   width: 100%;
 }
+
+.firstItems {
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-wrap: wrap;
+}
+.firstItems div {
+  width: 100%;
+  background-color: red;
+  display: flex;
+}
 .firstItems label {
-display: block;
 width: 50%;
 color: white;
 background-color: #294B98;
 }
 .firstItems input {
-display: block;
 border: 1px Solid #294B98;
 width: 50%;
-color: white;
+color: rgb(0, 0, 0);
 background-color: #294B98;
 }
 

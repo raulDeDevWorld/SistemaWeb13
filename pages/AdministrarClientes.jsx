@@ -144,7 +144,7 @@ function Users() {
 
         let obj = {
             banco: pdfData['AD-BANCO'] ? pdfData['AD-BANCO'] : userDB.bank.banco,
-            direccionDeBanco: pdfData['AD-DIRECCION DE BANCO"'] ? pdfData['AD-DIRECCION DE BANCO"'] : userDB.bank.direccionDeBanco,
+            direccionDeBanco: pdfData['AD-DIRECCION DE BANCO'] ? pdfData['AD-DIRECCION DE BANCO'] : userDB.bank.direccionDeBanco,
             codigoSWIFT: pdfData['AD-CODIGO SWIFT'] ? pdfData['AD-CODIGO SWIFT'] : userDB.bank.codigoSWIFT,
             cuentaEnBS: pdfData['AD-NUMERO DE CUENTA EN BS'] ? pdfData['AD-NUMERO DE CUENTA EN BS'] : userDB.bank.cuentaEnBS,
             cuentaEnUSD: pdfData['AD-NUMERO DE CUENTA EN USD'] ? pdfData['AD-NUMERO DE CUENTA EN USD'] : userDB.bank.cuentaEnUSD,
@@ -333,10 +333,13 @@ console.log(pdfData)
                                     <input type="text" name={"DIRECCION"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.direccion && userDB.bank.direccion} />
                                 </div>
                             </div>
-                            <Button style='buttonSecondary'>
+                            
+                        </div>
+<Button style='buttonSecondary'>
                                 Datos de la empresa
                             </Button>
-                        </div>
+
+
                     </form>
                 </div>}
                 {success == 'save' && <Success>Correcto</Success>}
